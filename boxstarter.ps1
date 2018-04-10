@@ -19,7 +19,7 @@
 Disable-UAC
 
 #--- Fonts ---
-choco install inconsolata -y
+# choco install inconsolata -y
   
 #--- Windows Settings ---
 Disable-BingSearch
@@ -42,26 +42,25 @@ choco install teracopy
 
 #--- Apps ---
 choco install docker-for-windows
-choco install sharex
 choco install microsoft-teams
 choco install sql-server-management-studio 
 choco install googlechrome 
 choco install visualstudiocode
-choco install visualstudio2017enterprise 
+# choco install visualstudio2017enterprise 
 choco install office365proplus -y
 choco install adobereader 
 choco install winrar 
 choco install vlc 
 choco install skype 
 choco install anaconda3 
-choco install r.studio
-choco install 1password
+# choco install r.studio
+choco install keepass
 choco install azure-cli 
 choco install azcopy 
 choco install microsoftazurestorageexplorer 
 choco install azurepowershell 
-choco install wunderlist 
-choco install spotify 
+# choco install wunderlist 
+# choco install spotify 
 choco install tomighty
 
 #--- Uninstall unecessary applications that come with Windows out of the box ---
