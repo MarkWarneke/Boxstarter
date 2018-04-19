@@ -38,7 +38,7 @@ choco install git -params '"/GitAndUnixToolsOnPath /WindowsTerminal"' -y
 choco install poshgit
 choco install sysinternals -y
 choco install vim
-choco install teracopy 
+# choco install teracopy 
 
 #--- Apps ---
 choco install docker-for-windows
@@ -46,7 +46,7 @@ choco install microsoft-teams
 choco install sql-server-management-studio 
 choco install googlechrome 
 choco install visualstudiocode
-# choco install visualstudio2017enterprise 
+choco install visualstudio2017enterprise 
 choco install office365proplus -y
 choco install adobereader 
 choco install winrar 
@@ -60,8 +60,17 @@ choco install azcopy
 choco install microsoftazurestorageexplorer 
 choco install azurepowershell 
 # choco install wunderlist 
-# choco install spotify 
-choco install tomighty
+choco install spotify 
+#choco install tomighty
+
+# --- Debugging ---
+
+choco install windbg
+
+# --- SDKS ---
+
+choco install windows-sdk-10.1
+
 
 #--- Uninstall unecessary applications that come with Windows out of the box ---
 
