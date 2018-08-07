@@ -1,7 +1,7 @@
 # Description: Boxstarter Script
-# Author: David Peter Hansen
-# Based on Boxstarter script by Jess Frazelle
-# Last Updated: 2017-11-10
+# Author: Mark Warneke
+# Based on Boxstarter script by David Peter Hansen
+# Last Updated: 2018-07-08
 #
 # Install boxstarter:
 # 	. { iwr -useb http://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
