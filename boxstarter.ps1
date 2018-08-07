@@ -35,43 +35,49 @@ choco install Microsoft-Windows-Subsystem-Linux -source windowsfeatures
 
 #--- Tools ---
 choco install git -params '"/GitAndUnixToolsOnPath /WindowsTerminal"' -y
-choco install poshgit
+choco install poshgit -y
 choco install sysinternals -y
-choco install vim
-# choco install teracopy 
+choco install vim -y
+choco install teracopy -y
+
+choco install dotnetcore-sdk -y
+choco install nuget.commandline -y
+choco install windirstat -y
+choco install imagemagick -y
+choco install nmap -y
 
 #--- Apps ---
-choco install docker-for-windows
-choco install microsoft-teams
-choco install sql-server-management-studio 
-choco install googlechrome 
-choco install visualstudiocode
-choco install visualstudio2017enterprise 
-choco install office365proplus -y
-choco install adobereader 
-choco install winrar 
-choco install vlc 
-choco install skype 
-choco install anaconda3 
+
+choco install microsoft-teams -y
+
+choco install googlechrome -y
+choco install visualstudiocode -y
+
+choco install pester -y
+choco install docker -y
+# choco install visualstudio2017enterprise 
+
+# choco install office365proplus -y
+
+#choco install sql-server-management-studio 
+# choco install anaconda3 
 # choco install r.studio
-choco install keepass
-choco install azure-cli 
-choco install azcopy 
-choco install microsoftazurestorageexplorer 
-choco install azurepowershell 
-# choco install wunderlist 
-choco install spotify 
-#choco install tomighty
 
-# --- Debugging ---
+choco install adobereader-y 
+choco install winrar -y
+choco install vlc -y
+choco install skype -y
+choco install keepass -y
+choco install winscp -y
 
-choco install windbg
+choco install azurepowershell -y
+choco install azure-cli -y 
+choco install azcopy -y
+choco install microsoftazurestorageexplorer -y
 
-# --- SDKS ---
+choco install wireshark -y
 
-choco install windows-sdk-10.1
-
-
+# 
 #--- Uninstall unecessary applications that come with Windows out of the box ---
 
 # 3D Builder
@@ -270,6 +276,9 @@ If (-Not (Test-Path "HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Adv
 }
 Set-ItemProperty -Path "HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" -Name PeopleBand -Type DWord -Value 0
 
+# Run local files
+reg import .\Restore_Windows_Photo_Viewer_CURRENT_USER.reg
+
 #--- Restore Temporary Settings ---
 Enable-UAC
 Enable-MicrosoftUpdate
@@ -277,7 +286,7 @@ Install-WindowsUpdate -acceptEula
 
 #--- Rename the Computer ---
 # Requires restart, or add the -Restart flag
-$computername = "markmitk"
+$computername = "MARKMITK"
 if ($env:computername -ne $computername) {
 	Rename-Computer -NewName $computername
 }
